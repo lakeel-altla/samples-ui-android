@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Select Image</string>
+    <string name="button_action_open_document">ACTION_OPEN_DOCUMENT</string>
+    <string name="button_action_pick">ACTION_PICK</string>
+</resources>

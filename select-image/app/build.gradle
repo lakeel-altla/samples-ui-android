@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+// android-apt for Butter Knife
+apply plugin: 'com.neenbedankt.android-apt'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "com.lakeel.altla.sample.selectimage"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    apt 'com.jakewharton:butterknife-compiler:8.1.0'
+
+    compile 'com.android.support:appcompat-v7:24.2.1'
+    compile 'com.jakewharton:butterknife:8.1.0'
+}
